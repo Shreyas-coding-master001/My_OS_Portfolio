@@ -26,7 +26,7 @@ const Nav = () => {
         </div>
 
         <div className="right-section">
-            <div className="wifi-icon">
+            <div className="wifi-icon" title="Just Dummy Icon">
                 <img src="./Nav_icons/wifi.svg" alt="Wifi" />
             </div>
             <DateTime />
