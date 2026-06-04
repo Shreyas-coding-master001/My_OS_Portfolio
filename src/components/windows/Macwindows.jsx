@@ -3,6 +3,9 @@ import { Rnd } from "react-rnd";
 import "./Macwindows.scss";
 
 const Macwindows = ({ children }) => {
+
+    const [zIndex, setIndex] = useState(1);
+
     const [isOpen, setIsOpen] = useState({
         red: false,
         yellow: false,
@@ -16,12 +19,17 @@ const Macwindows = ({ children }) => {
         y: 80,
         top: "50%",
         left: "50%",
-        width: 400,
-        height: 300,
+        width: 600,
+        height: 450,
       }}
-
+      style={{ zIndex: zIndex !== 1 ? zIndex : 1 }}
     >
-        <div className="window">
+        <div className="window"
+            onClick={() => {
+                setIndex(99);
+            }}
+            onMouseLeave={() => setIndex(5)}
+         >
             <div className="nav">
                 <div className="dot red"
                     onMouseEnter={() => setIsOpen(prev => ({ ...prev, red: true }))}
@@ -37,6 +45,10 @@ const Macwindows = ({ children }) => {
                     onMouseEnter={() => setIsOpen(prev => ({ ...prev, green: true }))}
                     onMouseLeave={() => setIsOpen(prev => ({ ...prev, green: false }))}
                 > {isOpen.green? '□' : ''} </div>
+
+                <div className="full-name">
+                    <p>Shreyas Patil - zsh</p>
+                </div>
             </div>
 
             <div className="main">

@@ -6,11 +6,14 @@
     padding: 0.3rem;
     overflow: hidden;
     overflow-y: auto;
+    position: relative;
 
     .nav{ 
-
+        position: fixed;
         display: flex;
+        align-items: center;
         gap: 0.5rem;
+        width: 97%;
         padding-bottom: 0.5rem;
         margin-bottom: 0.2rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -36,6 +39,12 @@
         .green{
             background-color: #28c940;
         }
+
+        .full-name{
+            margin-left: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
     }
 
     h2{
@@ -43,4 +52,25 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.526);
         padding-block: 0.5rem;
     }
+
+    .main{
+        height: 100%;
+        width: 100%;
+
+        margin-top: 2rem;
+    }
+}
+
+.window::-webkit-scrollbar {
+    width: 10px;
+    transform: translate(-30px);
+}
+
+.window::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.window::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
