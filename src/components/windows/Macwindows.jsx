@@ -4,8 +4,6 @@ import "./Macwindows.scss";
 
 const Macwindows = ({ children, width="55vw", height="70vh" }) => {
 
-    console.log(width);
-
     const [zIndex, setIndex] = useState(1);
 
     const [isOpen, setIsOpen] = useState({
