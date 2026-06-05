@@ -9,7 +9,6 @@ const Dock = () => {
 
   return (
     <footer>
-
       <div className="icons linkedin" title="Open My Linkedlin">
         <p>Linkedlin</p>
         <a href="https://linkedin.com/in/shreyas-kumar-7b3b0b1b1" target="_blank">

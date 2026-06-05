@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Rnd } from "react-rnd";
 import "./Macwindows.scss";
 
-const Macwindows = ({ children }) => {
+const Macwindows = ({ children, width="55vw", height="70vh" }) => {
+
+    console.log(width);
 
     const [zIndex, setIndex] = useState(1);
 
@@ -19,8 +21,8 @@ const Macwindows = ({ children }) => {
         y: 80,
         top: "50%",
         left: "50%",
-        width: 600,
-        height: 450,
+        width: width,
+        height: height,
       }}
       style={{ zIndex: zIndex !== 1 ? zIndex : 1 }}
     >
