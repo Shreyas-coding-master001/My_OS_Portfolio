@@ -7,6 +7,7 @@ import Notes from './components/windows/Notes.jsx';
 import PDF from './components/windows/PDF.jsx';
 import Spotify from './components/windows/Spotify.jsx';
 import Linkedlin from "./components/windows/Linkedlin.jsx";
+import Cli from './components/windows/Terminal.jsx';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <PDF />
       <Spotify />
       <Linkedlin />
+      <Cli />
     </main>
   )
 }
