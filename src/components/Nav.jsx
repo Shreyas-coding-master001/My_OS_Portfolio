@@ -2,7 +2,9 @@ import React from 'react';
 import "./Nav.scss";
 import DateTime from './DateTime';
 
+
 const Nav = () => {
+
   return (
     <nav>
         <div className="left-section">

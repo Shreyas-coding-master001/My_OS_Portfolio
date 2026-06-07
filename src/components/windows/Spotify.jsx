@@ -2,9 +2,9 @@ import React from 'react';
 import "./Spotify.scss";
 import Macwindows from './Macwindows';
 
-const Spotify = () => {
+const Spotify = ({ windowName }) => {
   return (
-    <Macwindows width="30vw">
+    <Macwindows width="30vw" windowName={windowName}>
         <div className="Spofity-Playlist">
             <h2> Here Is Best Indian Songs for you(Preview Only)!!</h2>
 

@@ -1,21 +1,9 @@
 export const docks = [
     {
-        title: "Manage your schedule and events",
-        name: "Calendar",
-        link: "#",
-        icon: "./Docks/calender.svg",
-    },
-    {
         title: "Choose your Favorate Songs(Preview Only)",
         name: "Spotify",
         link: "#",
         icon: "./Docks/spotify.svg",
-    },
-    {
-        title: "Send and receive emails instantly",
-        name: "Email",
-        link: "#",
-        icon: "./Docks/mail.svg"
     },
     {
         title: "View and download my professional resume",

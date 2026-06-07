@@ -8,19 +8,22 @@ import PDF from './components/windows/PDF.jsx';
 import Spotify from './components/windows/Spotify.jsx';
 import Linkedlin from "./components/windows/Linkedlin.jsx";
 import Cli from './components/windows/Terminal.jsx';
+import { useWindowsContext } from "./context/windows.context.jsx";
 
 const App = () => {
+  const { windowsState } = useWindowsContext();
+
   return (
-    <main> 
+    <main>
       <Nav />
       <Dock />
 
-      <Github />  
-      <Notes />
-      <PDF />
-      <Spotify />
-      <Linkedlin />
-      <Cli />
+      {windowsState.github && <Github windowName="github" />}
+      {windowsState.notes && <Notes windowName="notes" />}
+      {windowsState.resume && <PDF windowName="resume" />}
+      {windowsState.spotify && <Spotify windowName="spotify" />}
+      {windowsState.linkedlin && <Linkedlin windowName="linkedlin" />}
+      {windowsState.cli && <Cli windowName="cli" />}
     </main>
   )
 }

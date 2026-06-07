@@ -3,7 +3,7 @@ import "./Github.scss";
 import Macwindows from "./Macwindows.jsx";
 import githubData from "../../assets/github.json";
 
-const Github = () => {
+const Github = ({windowName}) => {
 
     function GithubCard({id=-1, image= null, title= "", description= "", tags=[], repoLink="", demoLink= ""}){
         return(
@@ -29,7 +29,7 @@ const Github = () => {
     }
 
   return (
-    <Macwindows>
+    <Macwindows windowName={windowName}>
         <>
             <h2>My Github Projects</h2>
             <div className="github">

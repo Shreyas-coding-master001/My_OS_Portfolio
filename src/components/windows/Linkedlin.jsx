@@ -2,9 +2,9 @@ import React from 'react';
 import "./Linkedlin.scss";
 import Macwindows from './Macwindows';
 
-const Linkedlin = () => {
+const Linkedlin = ({ windowName }) => {
   return (
-    <Macwindows width='40vw'>
+    <Macwindows width='40vw' windowName={windowName}>
         <div className="My-Profile">
             <div className="top-section">
               <div className="banner">

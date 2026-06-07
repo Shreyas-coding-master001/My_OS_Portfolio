@@ -2,9 +2,9 @@ import React from 'react';
 import Macwindows from './Macwindows';
 import "./PDF.scss";
 
-const PDF = () => {
+const PDF = ({ windowName }) => {
   return (
-    <Macwindows>
+    <Macwindows windowName={windowName}>
         <div className="resume-container">
             <iframe 
                 src="./SHREYAS_PATIL __CV.pdf"

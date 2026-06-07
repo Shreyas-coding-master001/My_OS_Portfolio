@@ -47,9 +47,9 @@ const commands = {
 
 const Terminal = TerminalModule.default || TerminalModule;
 
-const Cli = () => {
+const Cli = ({ windowName }) => {
   return (
-    <Macwindows>
+    <Macwindows windowName={windowName}>
       <div className="Cli-window">
         <Terminal
           commands={commands}

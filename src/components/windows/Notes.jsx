@@ -5,7 +5,7 @@ import Markdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-const Notes = () => {
+const Notes = ({ windowName }) => {
 
   const [noteContent, setNoteContent] = useState(null);
 
@@ -18,7 +18,7 @@ const Notes = () => {
   }, []);
 
   return (
-    <Macwindows>
+    <Macwindows windowName={windowName}>
         <div className="Notes">
             <h2> 
               <img src='./Nav_icons/notes-svgrepo-com.svg' alt='Notes Icon' 

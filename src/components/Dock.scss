@@ -16,6 +16,10 @@ footer{
     padding: 0.5rem;
     border-radius: 0.5rem;
 
+    img{
+        pointer-events: none;
+    }
+
     .icons{
         padding: 0 0.5rem;
         padding-top: 0.5rem;
@@ -26,6 +30,7 @@ footer{
         transition: all linear 0.2s;
 
         p{
+            pointer-events: none;
             padding: 0.5rem;
             @include blur-Effect();
             border-radius: 0.5rem;
