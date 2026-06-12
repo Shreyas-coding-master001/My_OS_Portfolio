@@ -8,16 +8,19 @@ import { useWindowsContext } from '../context/windows.context.jsx';
 const Dock = () => {
 
   const { windowsState, setWindowsState } = useWindowsContext();
+  
 
   const handlewindows = (ele) => {
-    let name = ele.currentTarget.dataset.name;
-    name = name.toLowerCase();
-    
-    let prev = windowsState;
-    prev = { ...prev, 
-      [name] : !prev.name};
+      let name = ele.currentTarget.dataset.name;
+      name = name.toLowerCase();
+      let prev = windowsState;
+      
+      prev = { ...prev, 
+        [name] : !prev[name]
+      };
       setWindowsState(prev);
-  }
+    }
+  
 
   return (
     <footer>

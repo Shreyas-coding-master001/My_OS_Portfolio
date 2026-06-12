@@ -11,9 +11,12 @@ export function WindowsProvider({ children }) {
         linkedlin: false,
         cli: false
     })
+    
+    const [width, setwidth] = useState("55vw");
+    const [height, setheight] = useState("70vh");
 
     return (
-        <windowsContext.Provider value={{ windowsState, setWindowsState }}>
+        <windowsContext.Provider value={{ windowsState, setWindowsState, width, setwidth , height, setheight}}>
             {children}
         </windowsContext.Provider>
     );

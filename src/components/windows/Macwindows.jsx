@@ -3,10 +3,12 @@ import { Rnd } from "react-rnd";
 import "./Macwindows.scss";
 import { useWindowsContext } from '../../context/windows.context';
 
-const Macwindows = ({ children, width="55vw", height="70vh", windowName }) => {
+const Macwindows = ({ children, windowName }) => {
 
     const [zIndex, setIndex] = useState(1);
-    const { windowsState, setWindowsState } = useWindowsContext();
+    const { windowsState, setWindowsState, width, height, setwidth, setheight } = useWindowsContext();
+    const [windowsClose, setwindowsClose] = useState(false);
+    const [Shift, setShift] = useState({x: "50%", y: "50%"});
 
     const [isOpen, setIsOpen] = useState({
         red: false,
@@ -15,10 +17,24 @@ const Macwindows = ({ children, width="55vw", height="70vh", windowName }) => {
     });
 
     const handleClose = () => {
-        let prev = windowsState;
-        prev = { ...prev, [windowName] : !prev[windowName] }
-        setWindowsState(prev);    
+        setwindowsClose(true);
+        setTimeout(() => {
+            let prev = windowsState;
+            prev = { ...prev, [windowName] : !prev[windowName] }
+            setWindowsState(prev);    
+        }, 100);
         
+    }
+
+    const FullScreen = () => {
+        setwidth("100vw");
+        setheight("100vh");
+
+        let { x, y } = Shift;
+        x = "0";
+        y = "0";
+        const obj = {x,y}
+        setShift(obj);
     }
 
   return (
@@ -26,14 +42,14 @@ const Macwindows = ({ children, width="55vw", height="70vh", windowName }) => {
       default={{
         x: 200,
         y: 80,
-        top: "50%",
-        left: "50%",
+        top: Shift.x,
+        left: Shift.y,
         width: width,
         height: height,
       }}
       style={{ zIndex: zIndex !== 1 ? zIndex : 1 }}
     >
-        <div className="window"
+        <div className={`window ${windowsClose? "" : "Close"}`}
             onClick={() => {
                 setIndex(99);
             }}
@@ -50,12 +66,13 @@ const Macwindows = ({ children, width="55vw", height="70vh", windowName }) => {
                     onMouseEnter={() => setIsOpen(prev => ({ ...prev, yellow: true }))}
                     onMouseLeave={() => setIsOpen(prev => ({ ...prev, yellow: false }))}
                     title='Minimize'
-
+                    onClick={ handleClose }
                 > {isOpen.yellow? '-' : ''} </div>
                 <div className="dot green"
                     onMouseEnter={() => setIsOpen(prev => ({ ...prev, green: true }))}
                     onMouseLeave={() => setIsOpen(prev => ({ ...prev, green: false }))}
                     title='Full-Screen'
+                    onClick={ FullScreen }
                 > {isOpen.green? '□' : ''} </div>
 
                 <div className="full-name">
