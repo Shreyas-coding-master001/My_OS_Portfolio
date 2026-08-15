@@ -29,20 +29,11 @@
   ,
   {
     "id": 4,
-    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
-    "title": "ChatStream - Real-time Messaging App",
-    "description": "A lightweight chat application allowing users to create rooms and message instantly. Optimized for low latency communication.",
-    "tags": ["Vue.js", "Firebase", "Tailwind CSS", "Socket.io"],
-    "repoLink": "https://github.com/vuejs/core",
-    "demoLink": "https://vuejs.org/"
-  },
-  {
-    "id": 5,
-    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000",
-    "title": "TerminalX - CLI Productivity Tool",
-    "description": "A command-line interface tool built to automate repetitive developer tasks and manage local environments efficiently.",
-    "tags": ["Rust", "Clap", "Tokio", "System API"],
-    "repoLink": "https://github.com/rust-lang/rust",
-    "demoLink": null
+    "image": "https://ik.imagekit.io/fczc2w1de/OS-Portfolio/Screenshot%202026-08-15%20170402.png",
+    "title": "Moodify - AI-POWERED EMOTION-BASED MUSIC RECOMMENDATION",
+    "description": " AI-Powered Emotion-Based Music Recommendation System using Google MediaPipe Face Detection to detect facial emotions in real time.",
+    "tags": ["MERN stack", "Google MediaPipe", "React 5 layer Architecture"],
+    "repoLink": "https://github.com/Shreyas-coding-master001/Moodify-Project",
+    "demoLink": "moodify-project.vercel.app"
   }
 ]
